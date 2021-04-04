@@ -1,3 +1,34 @@
+# CarND-Capstone
+Self-Driving Car Engineer Nanodegree Program
+
+---
+## Introduction
+The project required to create ROS nodes, ROS publishers, ROS subscribers that would make  a simulated car follow a lane and  honor traffic light signals
+
+The telemetry data provided by the simulator to the program would include points representing a lane, traffic  lights locations, traffic light color state.
+
+## Implementation and Tuning
+The ROS nodes implemented in python 
+
+- provide the car controller with the points  to follow by providing coordinates and  angular and absolute velocities
+- use PID controller to calculate throttle, break, steering  angle and publish them to the vehicle controller
+- detect traffic lights position and provide deceleration path for the car to smoothly stop on the traffic light showing RED
+
+The program does not implement traffic light color detection using a classifier and instead uses the traffic light color state provided by the simulator itself
+
+## Performance
+The car stays within the lane and honors traffic light signals
+
+
+A short video  is included here:
+
+![ alt text ](./styx.gif "")
+
+## Reflection
+It was great to get familiar with ROS.  The details  provided for hte project and the walk-through were very hepful.
+
+
+
 This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. For more information about the project, see the project introduction [here](https://classroom.udacity.com/nanodegrees/nd013/parts/6047fe34-d93c-4f50-8336-b70ef10cb4b2/modules/e1a23b06-329a-4684-a717-ad476f0d8dff/lessons/462c933d-9f24-42d3-8bdc-a08a5fc866e4/concepts/5ab4b122-83e6-436d-850f-9f4d26627fd9).
 
 Please use **one** of the two installation options, either native **or** docker installation.
